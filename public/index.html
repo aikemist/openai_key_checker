@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>OPENAI ChatGPT Key Checker - check if you can use GPT-4 API</title>
+        <meta name="description" content="With our OpenAI ChatGPT Key Checker, verify whether your API key supports the advanced GPT-4 AI model quickly and efficiently. Type your key and check or batch upload for multiple keys.">
+        <meta name="keywords" content="ChatGPT, OpenAI, GPT-4 API, Key Checker">
+    </head>
+<body>
+    <div class="container">
+        <h1>OpenAI Key Checker - Support for GPT-4 API</h1>
+        <p class="description">Looking to verify if your API key supports the OpenAI GPT-4 model?<br>Just type in your key below.</p>
+        <div class="input-container">
+            <input id="input-message" type="password" onkeypress="handleKeyPress(event)" placeholder="Type your OpenAI GPT-4 API key here..." />
+            <div class="button-container"> <!-- new div for buttons -->
+                <button class="right-margin blue" id="send-button">Check</button>
+                <button class="left-margin orange" id="batch-button" title="Upload a text file containing one or more GPT-4 API keys, no strict format, our ChatGPT will do the trick">Batch</button>
+            </div>
+        </div>
+        <div id="chat-container"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
