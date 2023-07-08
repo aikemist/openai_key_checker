@@ -20,11 +20,12 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.post('/api/check', async (req, res) => {
-  const { key } = req.body;
+  const { key, org } = req.body;
 
   try {
       const configuration = new Configuration({
         apiKey: key,
+        organization: org,
       });
       
       const openai = new OpenAIApi(configuration);

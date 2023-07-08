@@ -3,6 +3,7 @@ const preprocessUrl = '/api/preprocess';
 
 const chatContainer = document.getElementById('chat-container');
 const inputMessage = document.getElementById('input-message');
+const inputOrg = document.getElementById('input-org');
 const sendButton = document.getElementById('send-button');
 const batchButton = document.getElementById('batch-button');
 const modelSelector = document.getElementById('model-selector');
@@ -17,9 +18,10 @@ sendButton.addEventListener('click', () => {
 
 function sendMessage() {
     const key = `${inputMessage.value}`;
+    const org = `${inputOrg.value}`;
   
     if (key.trim()) {
-      callOpenAI(key);
+      callOpenAI(key, org.trim());
     }
 }
 
@@ -113,7 +115,7 @@ function preprocessKeyText(keyText) {
     });    
 }
 
-function callOpenAI(key, briefOutput = false, keepChatMessage = false) {
+function callOpenAI(key, org, briefOutput = false, keepChatMessage = false) {
     
     if(!keepChatMessage)
     {
@@ -126,7 +128,7 @@ function callOpenAI(key, briefOutput = false, keepChatMessage = false) {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ key: key })
+        body: JSON.stringify({ key: key, org: org })
     })
     .then(response => response.json())
     .then(data => {

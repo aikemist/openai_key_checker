@@ -14,6 +14,7 @@
         <p class="description">Looking to verify if your API key supports the OpenAI GPT-4 model?<br>Just type in your key below.</p>
         <div class="input-container">
             <input id="input-message" type="password" onkeypress="handleKeyPress(event)" placeholder="Type your OpenAI GPT-4 API key here..." />
+            <input id="input-org" type="text" onkeypress="handleKeyPress(event)" placeholder="Type your OpenAI Organization ID here if needed..." />
             <div class="button-container"> <!-- new div for buttons -->
                 <button class="right-margin blue" id="send-button">Check</button>
                 <button class="left-margin orange" id="batch-button" title="Upload a text file containing one or more GPT-4 API keys, no strict format, our ChatGPT will do the trick">Batch</button>
