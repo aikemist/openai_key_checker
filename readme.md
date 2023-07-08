@@ -5,7 +5,7 @@ This project provides a simple web interface to check whether your OpenAI API ke
 ## Features
 
 - Check if your OpenAI API Key supports GPT-4 and other models.
-- Batch checking by uploading a text file containing multiple keys.
+- Batch checking by uploading a text file containing multiple keys (this task is peformed by ChatGPT so you need to provide a working key if you need this feature).
 - Simple and intuitive web interface.
 
 ## Project Setup
@@ -43,7 +43,7 @@ npm install
 
 ### Configuration
 
-Create a `.env` file in the project root directory and add your OpenAI API Key:
+Create a `.env` file in the project root directory and add your OpenAI API Key (only needed by batch mode):
 
 ```env
 OPENAI_API_KEY=your_openai_api_key
